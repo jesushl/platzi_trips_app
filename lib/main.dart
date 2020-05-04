@@ -19,13 +19,35 @@ class MyApp extends StatelessWidget {
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
         primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          color: Color.fromRGBO(255, 51, 153, 1)
+        )
       ),
       home:Scaffold(
         appBar:AppBar(
-          title: Text("Hola Mundo Feliz"),
+          title: Text("Share"),
         ) ,
-        body: Center(
-          child: Text("Hola Mundo Platzi"),
+        body: Container(
+          decoration: BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('images/montana.jpg'),
+              fit: BoxFit.cover,
+            )
+          ),
+          child: Center(
+            child: Container(
+              color: Color.fromRGBO(0, 0, 0, 0.5),
+                width: 500,
+                child: Text(
+                "Naughty",
+                style: TextStyle(
+                    fontSize: 60,
+                    color: Color.fromRGBO(255, 20, 200, 0.9),
+                ),
+                textAlign: TextAlign.center,
+                ),
+            ),
+          ),
         ),
       )// MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -49,6 +71,7 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
+
 
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
