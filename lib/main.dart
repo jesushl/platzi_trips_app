@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+// Local imports
+import 'description_place.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,30 +27,9 @@ class MyApp extends StatelessWidget {
       ),
       home:Scaffold(
         appBar:AppBar(
-          title: Text("Share"),
+          title: Text("Title"),
         ) ,
-        body: Container(
-          decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage('images/montana.jpg'),
-              fit: BoxFit.cover,
-            )
-          ),
-          child: Center(
-            child: Container(
-              color: Color.fromRGBO(0, 0, 0, 0.5),
-                width: 500,
-                child: Text(
-                "Naughty",
-                style: TextStyle(
-                    fontSize: 60,
-                    color: Color.fromRGBO(255, 20, 200, 0.9),
-                ),
-                textAlign: TextAlign.center,
-                ),
-            ),
-          ),
-        ),
+        body: new DescriptionPlace("Name_place", 3.6, "some descriptions" ),
       )// MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
