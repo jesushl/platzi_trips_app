@@ -56,7 +56,8 @@ class DescriptionPlace extends StatelessWidget{
         style: const TextStyle(
           fontSize: 16.0,
           fontWeight: FontWeight.bold,
-          color: Colors.black
+          color: Colors.black,
+          fontFamily: "Ubuntu",
         ),
       ),
     );
@@ -74,7 +75,8 @@ class DescriptionPlace extends StatelessWidget{
             namePlace,
             style: TextStyle(
               fontSize: 30.0,
-              fontWeight: FontWeight.w900
+              fontWeight: FontWeight.w900,
+              fontFamily: "Ubuntu",
             ),
             textAlign: TextAlign.left,
           )
